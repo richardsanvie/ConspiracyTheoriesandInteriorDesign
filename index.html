@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            height: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .img1 {background-image: url("brad-fickeisen-hW-422SNyK4-unsplash.webp");}
+
+        .img2 {background-image: url("denys-nevozhai-D68ADLeMh5Q-unsplash.webp");}
+
+        .img3 {background-image: url("felix-fuchs-oAeEh74WVXY-unsplash.webp");}
+
+        .img4 {background-image: url("francois-hoang-O98B_D0kxyA-unsplash.webp");}
+
+        .img5 {background-image: url("luke-witter-6c90hRXZs1o-unsplash.webp");}
+
+        .img6 {background-image: url("rahul-pandit-K7dUPvKmedI-unsplash.webp");}
+
+        .bg-text {
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 300px;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-image img1"></div>
+    <div class="bg-image img2"></div>
+    <div class="bg-image img3"></div>
+    <div class="bg-image img4"></div>
+    <div class="bg-image img5"></div>
+    <div class="bg-image img6"></div>
+
+        <div class="container align-items-center d-flex justify-content-center bg-text p-5" style="height: 100vh;">
+           <div>
+            <button id="result" class="fw-weight btn btn-outline-danger mt-2" id="button" disabled>Condinção: B > A</button>
+            <div class="form-floating mt-2">
+                <input type="number" class="form-control" placeholder="#" id="numberA">
+                <label for="numberA">Campo A</label>
+            </div>
+            <div class="form-floating mt-2">
+                <input type="number" class="form-control" placeholder="#" id="numberB">
+                <label for="numberB">Campo B</label>
+            </div>
+            <button type="button" class="btn btn-outline-warning mt-2" onclick="myFunction()">Submit</button>
+            
+           </div>
+        </div>
+        
+
+    <script>
+        function myFunction() {
+            let x = parseFloat(document.getElementById("numberA").value);
+            let y = parseFloat(document.getElementById("numberB").value);
+    
+            let text;
+            if (x < y) {
+                text = "Condição válida: Número B maior que número A.";
+            } else if (y < x) {
+                text = "Condição inválida: Número A maior que número B.";
+            } else {
+                text = "Os números A e B são iguais.";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
